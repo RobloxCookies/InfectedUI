@@ -1,0 +1,68 @@
+for i,v in pairs(game:GetService("CoreGui"):GetChildren()) do
+	if v.Name == "BearUI" then
+		return v
+	end
+end
+
+local BearUI = Instance.new("ScreenGui")
+local main = Instance.new("Frame")
+local UpLine = Instance.new("Frame")
+local DownLine = Instance.new("Frame")
+local Credits = Instance.new("TextLabel")
+local NotifyTitle = Instance.new("TextLabel")
+
+BearUI.Name = "BearUI"
+BearUI.Parent = game:GetService("CoreGui")
+BearUI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+main.Name = "main"
+main.Parent = BearUI
+main.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+main.BackgroundTransparency = 0.500
+main.BorderSizePixel = 0
+main.Position = UDim2.new(0, 0, 0.76767683, 0)
+main.Size = UDim2.new(0, 213, 0, 115)
+
+
+UpLine.Name = "UpLine"
+UpLine.Parent = main
+UpLine.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+UpLine.BorderSizePixel = 0
+UpLine.Size = UDim2.new(0, 213, 0, 6)
+
+DownLine.Name = "DownLine"
+DownLine.Parent = main
+DownLine.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+DownLine.BorderSizePixel = 0
+DownLine.Position = UDim2.new(0, 0, 0.939130425, 0)
+DownLine.Size = UDim2.new(0, 213, 0, 6)
+
+Credits.Name = "Credits"
+Credits.Parent = main
+Credits.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Credits.BackgroundTransparency = 1.000
+Credits.Position = UDim2.new(0, 0, 0.843478262, 0)
+Credits.Size = UDim2.new(0, 213, 0, 10)
+Credits.Font = Enum.Font.Bangers
+Credits.Text = "Dev: NoDefeater UI: Infected"
+Credits.TextColor3 = Color3.fromRGB(255, 255, 255)
+Credits.TextSize = 14.000
+
+NotifyTitle.Name = "NotifyTitle"
+NotifyTitle.Parent = main
+NotifyTitle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+NotifyTitle.BackgroundTransparency = 1.000
+NotifyTitle.Position = UDim2.new(0, 0, 0.0521739125, 0)
+NotifyTitle.Size = UDim2.new(0, 213, 0, 85)
+NotifyTitle.Font = Enum.Font.ArialBold
+NotifyTitle.Text = ""
+NotifyTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
+NotifyTitle.TextSize = 14.000
+
+wait(1)
+
+NotifyTitle.Visible = true
+
+wait(4)
+
+NotifyTitle.Visible = false
